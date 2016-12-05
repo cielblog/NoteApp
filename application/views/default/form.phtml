@@ -1,0 +1,10 @@
+<form method="POST" action="http://localhost/NoteApp/welcome/fuck">
+    <p>
+        <?php if (isset($name)):?>
+        <span style="color: red"><?= $name?></span>
+        <?php endif;?>
+    </p>
+    <input type="text" name="name">
+
+    <input type="submit">
+</form>

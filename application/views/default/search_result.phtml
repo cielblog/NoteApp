@@ -1,0 +1,13 @@
+<div class="block">
+    <div class="block-title">My Notes</div>
+    <p class="block-content">
+        <?php if (count($terms)):?>
+        <?php foreach ($terms as $note):?>
+    <div class="note-box">
+        <span class="time"><?=$note['time']?></span>
+        <span class="title"><?=$note['title']?></span>
+    </div>
+    <?php endforeach;?>
+    <?php endif;?>
+    </p>
+</div>

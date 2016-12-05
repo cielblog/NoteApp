@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-sm-4">
+        <div class="block">
+            <div class="block-title">My Notes</div>
+            <p class="block-content">
+            <?php foreach ($notes_list as $note):?>
+            <div class="note-box">
+                <span class="time"><?=$note['time']?></span>
+                <span class="title"><?=$note['title']?></span>
+            </div>
+            <?php endforeach;;?>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="noteWrapper">
+            <div class="alert" id="alert">
+
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon">Note Title: </span>
+                <input type="text" name="note_title" id="note_title" class="form-control" placeholder="">
+                <input type="hidden" name="action" id="action" value="<?= Config::get('SITE_URL')?>/welcome/save_note">
+            </div>
+            <br>
+            <textarea name="note_text" id="note_text"></textarea>
+
+            <div class="footer">
+                <button class="btn btn-primary btn-sm" id="saveNote">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
